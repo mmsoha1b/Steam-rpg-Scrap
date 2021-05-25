@@ -4,7 +4,7 @@ import requests
 
 
 
-writer          =       open('TopSteam.txt','a')
+writer          =       open('TopSteam.txt','a',encoding='utf-8')
 tim             =       datetime.now().strftime("%d/%m/%Y %H:%M:%S")       
 print(tim)
 
@@ -32,8 +32,7 @@ for container in containers:
         price=discount_prices.find('span').text.strip()          # In case there is a dicount don't Store OG price find and store ptice after disount only
     
     elif((discount_prices==None) and prices!=None):
-        price=prices.text.strip()                                # Store regular price if no disount
-        
+        price=prices.text.strip()                                # Store regular price if no disount        
         if(price==''):
             price='Price cannot be found'
     
