@@ -3,7 +3,6 @@ from datetime import datetime
 import requests
 
 
-
 writer          =       open('TopSteam.txt','a',encoding='utf-8')
 tim             =       datetime.now().strftime("%d/%m/%Y %H:%M:%S")       
 print(tim)
